@@ -1,35 +1,17 @@
 Microsoft Windows [Version 10.0.19044.2130]
 (c) Microsoft Corporation. All rights reserved.
 
-C:\Users\arian>python
+C:\Users\arian>py
 Python 3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
->>> pip install numpy
-  File "<stdin>", line 1
-    pip install numpy
-        ^^^^^^^
-SyntaxError: invalid syntax
->>> ^X^Z
-  File "<stdin>", line 1
-    ↑→
-    ^
-SyntaxError: invalid syntax
 >>> ^Z
 
 
 C:\Users\arian>pip install numpy
-Collecting numpy
-  Downloading numpy-1.23.5-cp310-cp310-win_amd64.whl (14.6 MB)
-     ---------------------------------------- 14.6/14.6 MB 1.3 MB/s eta 0:00:00
-Installing collected packages: numpy
-Successfully installed numpy-1.23.5
+Requirement already satisfied: numpy in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (1.23.5)
 
 [notice] A new release of pip available: 22.1.2 -> 22.3.1
 [notice] To update, run: python.exe -m pip install --upgrade pip
-
-C:\Users\arian>conda install numpy
-'conda' is not recognized as an internal or external command,
-operable program or batch file.
 
 C:\Users\arian>py
 Python 3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)] on win32
@@ -39,12 +21,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 C:\Users\arian>pip install scipy
-Collecting scipy
-  Downloading scipy-1.9.3-cp310-cp310-win_amd64.whl (40.1 MB)
-     ---------------------------------------- 40.1/40.1 MB 1.6 MB/s eta 0:00:00
+Requirement already satisfied: scipy in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (1.9.3)
 Requirement already satisfied: numpy<1.26.0,>=1.18.5 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from scipy) (1.23.5)
-Installing collected packages: scipy
-Successfully installed scipy-1.9.3
 
 [notice] A new release of pip available: 22.1.2 -> 22.3.1
 [notice] To update, run: python.exe -m pip install --upgrade pip
@@ -52,110 +30,37 @@ Successfully installed scipy-1.9.3
 C:\Users\arian>pip install pandas
 Collecting pandas
   Downloading pandas-1.5.1-cp310-cp310-win_amd64.whl (10.4 MB)
-     ------------------- -------------------- 5.1/10.4 MB 1.7 MB/s eta 0:00:04
-ERROR: Exception:
-Traceback (most recent call last):
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 435, in _error_catcher
-    yield
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 516, in read
-    data = self._fp.read(amt) if not fp_closed else b""
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py", line 90, in read
-    data = self.__fp.read(amt)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 465, in read
-    s = self.fp.read(amt)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
-    return self._sock.recv_into(b)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1273, in recv_into
-    return self.read(nbytes, buffer)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1129, in read
-    return self._sslobj.read(len, buffer)
-ssl.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2548)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\base_command.py", line 167, in exc_logging_wrapper
-    status = run_func(*args)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\req_command.py", line 205, in wrapper
-    return func(self, options, args)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\commands\install.py", line 341, in run
-    requirement_set = resolver.resolve(
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py", line 94, in resolve
-    result = self._result = resolver.resolve(
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 481, in resolve
-    state = resolution.resolve(requirements, max_rounds=max_rounds)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 348, in resolve
-    self._add_to_criteria(self.state.criteria, r, parent=None)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 172, in _add_to_criteria
-    if not criterion.candidates:
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\structs.py", line 151, in __bool__
-    return bool(self._sequence)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 155, in __bool__
-    return any(self)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 143, in <genexpr>
-    return (c for c in iterator if id(c) not in self._incompatible_ids)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 47, in _iter_built
-    candidate = func()
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\factory.py", line 215, in _make_candidate_from_link
-    self._link_candidate_cache[link] = LinkCandidate(
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 291, in __init__
-    super().__init__(
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 161, in __init__
-    self.dist = self._prepare()
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 230, in _prepare
-    dist = self._prepare_distribution()
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 302, in _prepare_distribution
-    return preparer.prepare_linked_requirement(self._ireq, parallel_builds=True)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 428, in prepare_linked_requirement
-    return self._prepare_linked_requirement(req, parallel_builds)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 473, in _prepare_linked_requirement
-    local_file = unpack_url(
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 155, in unpack_url
-    file = get_http_url(
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 96, in get_http_url
-    from_path, content_type = download(link, temp_dir.path)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\network\download.py", line 146, in __call__
-    for chunk in chunks:
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\progress_bars.py", line 53, in _rich_progress_bar
-    for chunk in iterable:
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\network\utils.py", line 63, in response_chunks
-    for chunk in response.raw.stream(
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 573, in stream
-    data = self.read(amt=amt, decode_content=decode_content)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 509, in read
-    with self._error_catcher():
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
-    self.gen.throw(typ, value, traceback)
-  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 446, in _error_catcher
-    raise SSLError(e)
-pip._vendor.urllib3.exceptions.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2548)
+     ---------------------------------------- 10.4/10.4 MB 1.9 MB/s eta 0:00:00
+Collecting python-dateutil>=2.8.1
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ---------------------------------------- 247.7/247.7 kB 1.3 MB/s eta 0:00:00
+Collecting pytz>=2020.1
+  Downloading pytz-2022.6-py2.py3-none-any.whl (498 kB)
+     ---------------------------------------- 498.1/498.1 kB 1.6 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.21.0 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from pandas) (1.23.5)
+Requirement already satisfied: six>=1.5 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil>=2.8.1->pandas) (1.16.0)
+Installing collected packages: pytz, python-dateutil, pandas
+Successfully installed pandas-1.5.1 python-dateutil-2.8.2 pytz-2022.6
 
 [notice] A new release of pip available: 22.1.2 -> 22.3.1
 [notice] To update, run: python.exe -m pip install --upgrade pip
 
 C:\Users\arian>pip install -U scikit-learn
-Collecting scikit-learn
-  Downloading scikit_learn-1.1.3-cp310-cp310-win_amd64.whl (7.5 MB)
-     ---------------------------------------- 7.5/7.5 MB 1.8 MB/s eta 0:00:00
+Requirement already satisfied: scikit-learn in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (1.1.3)
 Requirement already satisfied: scipy>=1.3.2 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.9.3)
-Collecting threadpoolctl>=2.0.0
-  Downloading threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
-Collecting joblib>=1.0.0
-  Downloading joblib-1.2.0-py3-none-any.whl (297 kB)
-     ---------------------------------------- 298.0/298.0 kB 1.7 MB/s eta 0:00:00
 Requirement already satisfied: numpy>=1.17.3 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.23.5)
-Installing collected packages: threadpoolctl, joblib, scikit-learn
-Successfully installed joblib-1.2.0 scikit-learn-1.1.3 threadpoolctl-3.1.0
+Requirement already satisfied: joblib>=1.0.0 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.2.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
 
 [notice] A new release of pip available: 22.1.2 -> 22.3.1
 [notice] To update, run: python.exe -m pip install --upgrade pip
 
 C:\Users\arian>pip install tensorflow
 Collecting tensorflow
-  Downloading tensorflow-2.11.0-cp310-cp310-win_amd64.whl (1.9 kB)
+  Using cached tensorflow-2.11.0-cp310-cp310-win_amd64.whl (1.9 kB)
 Collecting tensorflow-intel==2.11.0
   Downloading tensorflow_intel-2.11.0-cp310-cp310-win_amd64.whl (266.3 MB)
-     ---------------------------- ----------- 191.7/266.3 MB 1.6 MB/s eta 0:00:47
+     ------------------- -------------------- 126.5/266.3 MB 1.8 MB/s eta 0:01:18
 ERROR: Exception:
 Traceback (most recent call last):
   File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 435, in _error_catcher
@@ -239,3 +144,266 @@ pip._vendor.urllib3.exceptions.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_M
 
 [notice] A new release of pip available: 22.1.2 -> 22.3.1
 [notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\arian>pip install tensorflow
+Collecting tensorflow
+  Using cached tensorflow-2.11.0-cp310-cp310-win_amd64.whl (1.9 kB)
+Collecting tensorflow-intel==2.11.0
+  Downloading tensorflow_intel-2.11.0-cp310-cp310-win_amd64.whl (266.3 MB)
+     ---------------------------------------- 266.3/266.3 MB 916.4 kB/s eta 0:00:00
+Collecting flatbuffers>=2.0
+  Downloading flatbuffers-22.10.26-py2.py3-none-any.whl (26 kB)
+Collecting typing-extensions>=3.6.6
+  Downloading typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+Requirement already satisfied: numpy>=1.20 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorflow-intel==2.11.0->tensorflow) (1.23.5)
+Collecting termcolor>=1.1.0
+  Downloading termcolor-2.1.1-py3-none-any.whl (6.2 kB)
+Collecting protobuf<3.20,>=3.9.2
+  Downloading protobuf-3.19.6-cp310-cp310-win_amd64.whl (895 kB)
+     ---------------------------------------- 895.7/895.7 kB 1.5 MB/s eta 0:00:00
+Collecting packaging
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     ---------------------------------------- 40.8/40.8 kB 984.2 kB/s eta 0:00:00
+Collecting h5py>=2.9.0
+  Downloading h5py-3.7.0-cp310-cp310-win_amd64.whl (2.6 MB)
+     ---------------------------------------- 2.6/2.6 MB 1.8 MB/s eta 0:00:00
+Collecting absl-py>=1.0.0
+  Downloading absl_py-1.3.0-py3-none-any.whl (124 kB)
+     ---------------------------------------- 124.6/124.6 kB 1.2 MB/s eta 0:00:00
+Collecting keras<2.12,>=2.11.0
+  Downloading keras-2.11.0-py2.py3-none-any.whl (1.7 MB)
+     ---------------------------------------- 1.7/1.7 MB 1.8 MB/s eta 0:00:00
+Collecting libclang>=13.0.0
+  Downloading libclang-14.0.6-py2.py3-none-win_amd64.whl (14.2 MB)
+     ---------------------------------------- 14.2/14.2 MB 1.8 MB/s eta 0:00:00
+Requirement already satisfied: six>=1.12.0 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorflow-intel==2.11.0->tensorflow) (1.16.0)
+Collecting tensorboard<2.12,>=2.11
+  Downloading tensorboard-2.11.0-py3-none-any.whl (6.0 MB)
+     ---------------------------------------- 6.0/6.0 MB 1.6 MB/s eta 0:00:00
+Collecting google-pasta>=0.1.1
+  Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+     ---------------------------------------- 57.5/57.5 kB 761.8 kB/s eta 0:00:00
+Collecting opt-einsum>=2.3.2
+  Downloading opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+     ---------------------------------------- 65.5/65.5 kB 1.2 MB/s eta 0:00:00
+Collecting wrapt>=1.11.0
+  Downloading wrapt-1.14.1-cp310-cp310-win_amd64.whl (35 kB)
+Collecting tensorflow-estimator<2.12,>=2.11.0
+  Downloading tensorflow_estimator-2.11.0-py2.py3-none-any.whl (439 kB)
+     ---------------------------------------- 439.2/439.2 kB 1.1 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorflow-intel==2.11.0->tensorflow) (58.1.0)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1
+  Downloading tensorflow_io_gcs_filesystem-0.27.0-cp310-cp310-win_amd64.whl (1.5 MB)
+     ---------------------------------------- 1.5/1.5 MB 1.5 MB/s eta 0:00:00
+Collecting grpcio<2.0,>=1.24.3
+  Downloading grpcio-1.50.0-cp310-cp310-win_amd64.whl (3.6 MB)
+     ---------------------------------------- 3.6/3.6 MB 1.8 MB/s eta 0:00:00
+Collecting astunparse>=1.6.0
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting gast<=0.4.0,>=0.2.1
+  Downloading gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting wheel<1.0,>=0.23.0
+  Downloading wheel-0.38.4-py3-none-any.whl (36 kB)
+Collecting markdown>=2.6.8
+  Downloading Markdown-3.4.1-py3-none-any.whl (93 kB)
+     ---------------------------------------- 93.3/93.3 kB 755.0 kB/s eta 0:00:00
+Collecting google-auth<3,>=1.6.3
+  Downloading google_auth-2.14.1-py2.py3-none-any.whl (175 kB)
+     ---------------------------------------- 175.4/175.4 kB 1.3 MB/s eta 0:00:00
+Collecting tensorboard-data-server<0.7.0,>=0.6.0
+  Downloading tensorboard_data_server-0.6.1-py3-none-any.whl (2.4 kB)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2.28.1)
+Collecting tensorboard-plugin-wit>=1.6.0
+  Downloading tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+     ---------------------------------------- 781.3/781.3 kB 1.2 MB/s eta 0:00:00
+Requirement already satisfied: werkzeug>=1.0.1 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2.1.2)
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+     ---------------------------------------- 98.3/98.3 kB 1.1 MB/s eta 0:00:00
+Collecting cachetools<6.0,>=2.0.0
+  Downloading cachetools-5.2.0-py3-none-any.whl (9.3 kB)
+Collecting rsa<5,>=3.1.4
+  Downloading rsa-4.9-py3-none-any.whl (34 kB)
+Collecting pyasn1-modules>=0.2.1
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+     ---------------------------------------- 155.3/155.3 kB 1.0 MB/s eta 0:00:00
+Collecting requests-oauthlib>=0.7.0
+  Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (1.26.10)
+Requirement already satisfied: charset-normalizer<3,>=2 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2.1.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2022.6.15)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (3.3)
+Collecting pyasn1<0.5.0,>=0.4.6
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+     ------------------------------- -------- 61.4/77.1 kB 78.0 kB/s eta 0:00:01
+ERROR: Exception:
+Traceback (most recent call last):
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 435, in _error_catcher
+    yield
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 516, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py", line 90, in read
+    data = self.__fp.read(amt)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 465, in read
+    s = self.fp.read(amt)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1273, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\ssl.py", line 1129, in read
+    return self._sslobj.read(len, buffer)
+ssl.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2548)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\base_command.py", line 167, in exc_logging_wrapper
+    status = run_func(*args)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\req_command.py", line 205, in wrapper
+    return func(self, options, args)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\commands\install.py", line 341, in run
+    requirement_set = resolver.resolve(
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py", line 94, in resolve
+    result = self._result = resolver.resolve(
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 481, in resolve
+    state = resolution.resolve(requirements, max_rounds=max_rounds)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 373, in resolve
+    failure_causes = self._attempt_to_pin_criterion(name)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 213, in _attempt_to_pin_criterion
+    criteria = self._get_updated_criteria(candidate)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 204, in _get_updated_criteria
+    self._add_to_criteria(criteria, requirement, parent=candidate)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 172, in _add_to_criteria
+    if not criterion.candidates:
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\resolvelib\structs.py", line 151, in __bool__
+    return bool(self._sequence)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 155, in __bool__
+    return any(self)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 143, in <genexpr>
+    return (c for c in iterator if id(c) not in self._incompatible_ids)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 47, in _iter_built
+    candidate = func()
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\factory.py", line 215, in _make_candidate_from_link
+    self._link_candidate_cache[link] = LinkCandidate(
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 291, in __init__
+    super().__init__(
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 161, in __init__
+    self.dist = self._prepare()
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 230, in _prepare
+    dist = self._prepare_distribution()
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\resolution\resolvelib\candidates.py", line 302, in _prepare_distribution
+    return preparer.prepare_linked_requirement(self._ireq, parallel_builds=True)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 428, in prepare_linked_requirement
+    return self._prepare_linked_requirement(req, parallel_builds)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 473, in _prepare_linked_requirement
+    local_file = unpack_url(
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 155, in unpack_url
+    file = get_http_url(
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\operations\prepare.py", line 96, in get_http_url
+    from_path, content_type = download(link, temp_dir.path)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\network\download.py", line 146, in __call__
+    for chunk in chunks:
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\cli\progress_bars.py", line 53, in _rich_progress_bar
+    for chunk in iterable:
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_internal\network\utils.py", line 63, in response_chunks
+    for chunk in response.raw.stream(
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 573, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 509, in read
+    with self._error_catcher():
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\arian\AppData\Local\Programs\Python\Python310\lib\site-packages\pip\_vendor\urllib3\response.py", line 446, in _error_catcher
+    raise SSLError(e)
+pip._vendor.urllib3.exceptions.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2548)
+
+[notice] A new release of pip available: 22.1.2 -> 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\arian>pip install tensorflow
+Collecting tensorflow
+  Using cached tensorflow-2.11.0-cp310-cp310-win_amd64.whl (1.9 kB)
+Collecting tensorflow-intel==2.11.0
+  Using cached tensorflow_intel-2.11.0-cp310-cp310-win_amd64.whl (266.3 MB)
+Collecting libclang>=13.0.0
+  Using cached libclang-14.0.6-py2.py3-none-win_amd64.whl (14.2 MB)
+Collecting astunparse>=1.6.0
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting h5py>=2.9.0
+  Using cached h5py-3.7.0-cp310-cp310-win_amd64.whl (2.6 MB)
+Collecting absl-py>=1.0.0
+  Using cached absl_py-1.3.0-py3-none-any.whl (124 kB)
+Collecting gast<=0.4.0,>=0.2.1
+  Using cached gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting tensorboard<2.12,>=2.11
+  Using cached tensorboard-2.11.0-py3-none-any.whl (6.0 MB)
+Requirement already satisfied: six>=1.12.0 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorflow-intel==2.11.0->tensorflow) (1.16.0)
+Collecting flatbuffers>=2.0
+  Using cached flatbuffers-22.10.26-py2.py3-none-any.whl (26 kB)
+Collecting keras<2.12,>=2.11.0
+  Using cached keras-2.11.0-py2.py3-none-any.whl (1.7 MB)
+Collecting tensorflow-estimator<2.12,>=2.11.0
+  Using cached tensorflow_estimator-2.11.0-py2.py3-none-any.whl (439 kB)
+Collecting google-pasta>=0.1.1
+  Using cached google_pasta-0.2.0-py3-none-any.whl (57 kB)
+Collecting wrapt>=1.11.0
+  Using cached wrapt-1.14.1-cp310-cp310-win_amd64.whl (35 kB)
+Requirement already satisfied: numpy>=1.20 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorflow-intel==2.11.0->tensorflow) (1.23.5)
+Collecting opt-einsum>=2.3.2
+  Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Collecting grpcio<2.0,>=1.24.3
+  Using cached grpcio-1.50.0-cp310-cp310-win_amd64.whl (3.6 MB)
+Collecting typing-extensions>=3.6.6
+  Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+Requirement already satisfied: setuptools in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorflow-intel==2.11.0->tensorflow) (58.1.0)
+Collecting protobuf<3.20,>=3.9.2
+  Using cached protobuf-3.19.6-cp310-cp310-win_amd64.whl (895 kB)
+Collecting termcolor>=1.1.0
+  Using cached termcolor-2.1.1-py3-none-any.whl (6.2 kB)
+Collecting packaging
+  Using cached packaging-21.3-py3-none-any.whl (40 kB)
+Collecting tensorflow-io-gcs-filesystem>=0.23.1
+  Using cached tensorflow_io_gcs_filesystem-0.27.0-cp310-cp310-win_amd64.whl (1.5 MB)
+Collecting wheel<1.0,>=0.23.0
+  Using cached wheel-0.38.4-py3-none-any.whl (36 kB)
+Requirement already satisfied: werkzeug>=1.0.1 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2.1.2)
+Collecting tensorboard-data-server<0.7.0,>=0.6.0
+  Using cached tensorboard_data_server-0.6.1-py3-none-any.whl (2.4 kB)
+Requirement already satisfied: requests<3,>=2.21.0 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2.28.1)
+Collecting tensorboard-plugin-wit>=1.6.0
+  Using cached tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+Collecting markdown>=2.6.8
+  Using cached Markdown-3.4.1-py3-none-any.whl (93 kB)
+Collecting google-auth<3,>=1.6.3
+  Using cached google_auth-2.14.1-py2.py3-none-any.whl (175 kB)
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Using cached google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+Collecting rsa<5,>=3.1.4
+  Using cached rsa-4.9-py3-none-any.whl (34 kB)
+Collecting pyasn1-modules>=0.2.1
+  Using cached pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Collecting cachetools<6.0,>=2.0.0
+  Using cached cachetools-5.2.0-py3-none-any.whl (9.3 kB)
+Collecting requests-oauthlib>=0.7.0
+  Using cached requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2022.6.15)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (3.3)
+Requirement already satisfied: charset-normalizer<3,>=2 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (2.1.0)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in c:\users\arian\appdata\local\programs\python\python310\lib\site-packages (from requests<3,>=2.21.0->tensorboard<2.12,>=2.11->tensorflow-intel==2.11.0->tensorflow) (1.26.10)
+Collecting pyasn1<0.5.0,>=0.4.6
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+     ---------------------------------------- 77.1/77.1 kB 329.6 kB/s eta 0:00:00
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+     ---------------------------------------- 151.7/151.7 kB 822.4 kB/s eta 0:00:00
+Installing collected packages: tensorboard-plugin-wit, pyasn1, libclang, flatbuffers, wrapt, wheel, typing-extensions, termcolor, tensorflow-io-gcs-filesystem, tensorflow-estimator, tensorboard-data-server, rsa, pyparsing, pyasn1-modules, protobuf, opt-einsum, oauthlib, markdown, keras, h5py, grpcio, google-pasta, gast, cachetools, absl-py, requests-oauthlib, packaging, google-auth, astunparse, google-auth-oauthlib, tensorboard, tensorflow-intel, tensorflow
+Successfully installed absl-py-1.3.0 astunparse-1.6.3 cachetools-5.2.0 flatbuffers-22.10.26 gast-0.4.0 google-auth-2.14.1 google-auth-oauthlib-0.4.6 google-pasta-0.2.0 grpcio-1.50.0 h5py-3.7.0 keras-2.11.0 libclang-14.0.6 markdown-3.4.1 oauthlib-3.2.2 opt-einsum-3.3.0 packaging-21.3 protobuf-3.19.6 pyasn1-0.4.8 pyasn1-modules-0.2.8 pyparsing-3.0.9 requests-oauthlib-1.3.1 rsa-4.9 tensorboard-2.11.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-2.11.0 tensorflow-estimator-2.11.0 tensorflow-intel-2.11.0 tensorflow-io-gcs-filesystem-0.27.0 termcolor-2.1.1 typing-extensions-4.4.0 wheel-0.38.4 wrapt-1.14.1
+
+[notice] A new release of pip available: 22.1.2 -> 22.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\arian>
